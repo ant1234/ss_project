@@ -86,7 +86,7 @@ RUN apt-get update -y && apt-get install -y \
     && mv composer.phar /usr/local/bin/composer \
     && cd /var/www/html/ss_project \
     && composer install \
-    && chown -R www-data:www-data public/assets public/assets/.htaccess;
+    && chown -R www-data:www-data public/assets public/assets/.htaccess .;
 
 EXPOSE 80
 CMD ["apache2-foreground"]
